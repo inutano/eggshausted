@@ -3,9 +3,8 @@ export EDITOR='nano'
 limit coredumpsize 0
 
 # rbenv
-if (( $+commands[rbenv] )); then
-  eval "$(rbenv init -)"
-fi
+[ -d $HOME/.rbenv/bin ] && export PATH="$HOME/.rbenv/bin:$PATH"
+[ -f $HOME/.rbenv/bin/rbenv ] && eval "$(rbenv init -)"
 
 # Load zplug
 [[ -d ~/.zplug ]] || git clone https://github.com/zplug/zplug ~/.zplug
