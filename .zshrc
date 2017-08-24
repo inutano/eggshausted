@@ -16,6 +16,7 @@ zplug "yous/vanilli.sh"
 zplug "zsh-users/zsh-completions"
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
+zplug "lib/directories", from:oh-my-zsh
 zplug "inutano/eggshausted"
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -29,6 +30,11 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load --verbose
+
+if zplug check "zsh-users/zsh-history-substring-search"; then
+  bindkey -M emacs '^P' history-substring-search-up
+  bindkey -M emacs '^N' history-substring-search-down
+fi
 
 # LS COLORS
 export CLICOLOR=1
