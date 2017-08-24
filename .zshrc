@@ -1,3 +1,5 @@
+export EDITOR='nano'
+
 limit coredumpsize 0
 
 # rbenv
