@@ -1,4 +1,4 @@
-# Modified version of https://github.com/yous/lime
+# This is a zsh plugin modified from https://github.com/yous/lime
 
 # Outputs -1, 0, or 1 if the installed git version is less than, equal to, or
 # greater than the input version, respectively
