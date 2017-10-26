@@ -1,4 +1,5 @@
 export EDITOR='nano'
+export PATH=$HOME/local/bin:$PATH
 
 limit coredumpsize 0
 
